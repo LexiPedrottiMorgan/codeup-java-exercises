@@ -20,8 +20,7 @@ public class ConsoleExercises {
         System.out.format("%nEnter a Sentence%n");
         String userSentence = scanner.nextLine();
         scanner.nextLine();
-
-//this prompt gets executed but it doesn't wait for the input to move on.
+//this prompt gets executed but the sentence is blank in the output
 
         System.out.format("%nWe are going to calculate the perimeter of the classroom.%n");
         System.out.format("%nEnter the length in feet%n");
