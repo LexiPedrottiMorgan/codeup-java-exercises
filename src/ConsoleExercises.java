@@ -20,7 +20,10 @@ public class ConsoleExercises {
         System.out.format("%nEnter a Sentence%n");
         String userSentence = scanner.nextLine();
         userSentence = scanner.nextLine();
-//this prompt gets executed but the sentence is blank in the output
+        //A better way to fix the skipping problem: Quick two steps to avoid            the scanner object “skipping” inputs
+        //1. `new Scanner(System.in).useDelimiter("\n")`
+        //2. use `.next()` instead of .nextLine for your text inputs
+
 
         System.out.format("%nWe are going to calculate the perimeter, area, and volume of the classroom.%n");
         System.out.format("%nEnter the length in feet%n");
