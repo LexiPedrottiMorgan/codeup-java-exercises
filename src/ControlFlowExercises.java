@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
+//  1. Loping Basics-----------------------------------------------------------
         System.out.println("Incrementing from 5 to 15 using a while loop:");
         int i = 5;
         while(i<=15){
@@ -75,6 +78,80 @@ public class ControlFlowExercises {
         for(long squaringFor = 2; squaringFor<=1000000; squaringFor*=squaringFor){
             System.out.println(squaringFor);
         }
+
+//      adding spacing between exercises
+        System.out.println();
+
+//  2. FIZZBUZZ------------------------------------------------------------------
+
+        System.out.format("FizzBuzz Exercise.%nPrint numbers 1-100.%nIf the number is divisible by 3 print Fizz.%nIf the number is divisible by 5 print Buzz.%nIf the number is divisible by 3 and 5 print FizzBuzz.%nIf the number doesn't fall into any of these categories print the number:%n");
+        for (int num=1; num<=100; num++){
+            if (num%3==0 && num%5== 0){
+                System.out.println("FizzBuzz");
+            } else if (num%3==0){
+                System.out.println("Fizz");
+            } else if (num%5==0){
+                System.out.println("Buzz");
+            } else {
+                System.out.println(num);
+            }
+        }
+
+//      adding spacing between exercises
+        System.out.println();
+
+//  3. Table of Powers----------------------------------------------------------
+   String userChoice;
+    do {
+       Scanner scan = new Scanner(System.in).useDelimiter("\n");
+       System.out.format("What number would you like to go up to?%n");
+
+       int userNumber = scan.nextInt();
+       System.out.format("Here is your table up to %d: %n", userNumber);
+//        printing the table
+       System.out.format("%nnumber  | squared |  cubed%n------- | ------- | -------%n");
+
+       for (int a = 1; a <= userNumber; a++) {
+           int aSquared = a * a;
+           int aCubed = a * a * a;
+           System.out.format(" %-7d| %-8d| %-7d%n", a, aSquared, aCubed);
+       }
+       System.out.println("Do you want to do another number? (yes or no)");
+       userChoice = scan.next();
+
+   } while (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes"));
+
+
+
+
+
+
+
+
+//      adding spacing between exercises
+        System.out.println();
+//  4.Convert Number Grades to Letter Grades-----------------------------------
+        Scanner scan = new Scanner(System.in).useDelimiter("\n");
+        System.out.format("Enter a number grade, and I will convert it to a letter grade:%n");
+        int userGrade = scan.nextInt();
+
+        String letterGrade="";
+
+        if (userGrade>88 && userGrade <=100){
+            letterGrade = "A";
+        } else if (userGrade < 88 && userGrade > 80) {
+            letterGrade = "B";
+        } else if (userGrade < 80 && userGrade > 67){
+            letterGrade = "C";
+        } else if (userGrade < 67 && userGrade > 60) {
+            letterGrade = "D";
+        } else if (userGrade < 60){
+            letterGrade = "F";
+        } else {
+            letterGrade = "That is not a valid grade entry.";
+        }
+
+            System.out.format("Number Grade: %s. Letter Grade: %s%n", userGrade, letterGrade);
 
 
     }
