@@ -19,21 +19,25 @@ public class ConsoleExercises {
 
         System.out.format("%nEnter a Sentence%n");
         String userSentence = scanner.nextLine();
-        scanner.nextLine();
+        userSentence = scanner.nextLine();
 //this prompt gets executed but the sentence is blank in the output
 
-        System.out.format("%nWe are going to calculate the perimeter of the classroom.%n");
+        System.out.format("%nWe are going to calculate the perimeter, area, and volume of the classroom.%n");
         System.out.format("%nEnter the length in feet%n");
         int length = Integer.parseInt(scanner.nextLine());
 
         System.out.format("%nEnter The width in feet%n");
         int width = Integer.parseInt(scanner.nextLine());
 
+        System.out.format("%nEnter The height in feet%n");
+        int height = Integer.parseInt(scanner.nextLine());
+
         int perimeter = (length*2) + (width*2);
         int area = length * width;
-        System.out.format("You entered the number: %d. You entered the words: %s, %s, %s. Your sentence was: %s", userInteger, userInputFirst, userInputSecond, userInputThird, userSentence);
+        int volume = length * width * height;
+        System.out.format("You entered the number: %d.%nYou entered the words: %s, %s,  %s. %nYour sentence was: %s %n", userInteger, userInputFirst, userInputSecond, userInputThird, userSentence);
 
-        System.out.format("%n The perimeter of the room is %d feet. The area of the room is %d square feet.", perimeter, area);
+        System.out.format("%nThe perimeter of the room is %d feet.%nThe area of the room is %d square feet.%nThe volume of the room is %d cubed feet.%n", perimeter, area, volume);
 
 
     }
