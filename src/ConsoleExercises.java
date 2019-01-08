@@ -24,20 +24,20 @@ public class ConsoleExercises {
 
         System.out.format("%nWe are going to calculate the perimeter, area, and volume of the classroom.%n");
         System.out.format("%nEnter the length in feet%n");
-        int length = Integer.parseInt(scanner.nextLine());
+        float length = scanner.nextFloat();
 
         System.out.format("%nEnter The width in feet%n");
-        int width = Integer.parseInt(scanner.nextLine());
+        float width = scanner.nextFloat();
 
         System.out.format("%nEnter The height in feet%n");
-        int height = Integer.parseInt(scanner.nextLine());
+        float height = scanner.nextFloat();
 
-        int perimeter = (length*2) + (width*2);
-        int area = length * width;
-        int volume = length * width * height;
+        float perimeter = (length*2) + (width*2);
+        float area = length * width;
+        float volume = length * width * height;
         System.out.format("You entered the number: %d.%nYou entered the words: %s, %s,  %s. %nYour sentence was: %s %n", userInteger, userInputFirst, userInputSecond, userInputThird, userSentence);
 
-        System.out.format("%nThe perimeter of the room is %d feet.%nThe area of the room is %d square feet.%nThe volume of the room is %d cubed feet.%n", perimeter, area, volume);
+        System.out.format("%nThe perimeter of the room is %.2f feet.%nThe area of the room is %.2f square feet.%nThe volume of the room is %.2f cubed feet.%n", perimeter, area, volume);
 
 
     }
