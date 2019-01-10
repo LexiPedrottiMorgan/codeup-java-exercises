@@ -19,23 +19,51 @@ public class MethodsExercises {
         System.out.print(diceRoll());
     }
 
-    // 1. Basic Arithmetic Methods:
+// 1. Basic Arithmetic Methods:
+/////  Addition: //////////////////////////////////////////////////
+    // integers:
     public static int addition(int numberA, int numberB) {
         return numberA + numberB;
     }
+    // doubles:
+    public static double addition(double numberA, double numberB) {
+        return numberA + numberB;
+    }
 
+///////  Subtraction: /////////////////////////////////////////////
+    //integers:
     public static int subtraction(int numberA, int numberB) {
         return numberA - numberB;
     }
+    // doubles:
+    public static double subtraction(double numberA, double numberB) {
+        return numberA - numberB;
+    }
 
+
+/////////  Multiplication: //////////////////////////////////////////
+    //integers:
     public static int multiplication(int numberA, int numberB) {
         return numberA * numberB;
     }
+    //doubles:
+    public static double multiplication(double numberA, double numberB) {
+        return numberA * numberB;
+    }
 
+///////// Division: /////////////////////////////////////////////////
+    //integers:
     public static int division(int numberA, int numberB) {
         return numberA / numberB;
     }
 
+    //doubles:
+    public static double division(double numberA, double numberB) {
+        return numberA / numberB;
+    }
+
+
+///////// Modulus: //////////////////////////////////////////////////
     public static int modulus(int numberA, int numberB) {
         return numberA % numberB;
     }
@@ -112,9 +140,6 @@ public class MethodsExercises {
         return dieA;
 
     }
-
-
-
 
 
 //this closes the MethodsExercises class at the very top:
