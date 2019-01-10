@@ -17,6 +17,7 @@ public class MethodsExercises {
         System.out.print(getInteger(1, 10));
         System.out.print(factorial());
         System.out.print(diceRoll());
+        System.out.print(multiplyManually(4, 5));
     }
 
 // 1. Basic Arithmetic Methods:
@@ -69,6 +70,31 @@ public class MethodsExercises {
     }
 
 
+//////////BONUS: Multiply without the * operator: /////////////
+
+    public static long multiplyManually(long a, long b) {
+        if (a==0||b==0){
+            return 0;
+        }
+        long product = 0;
+
+        if (b>1){
+            do {
+                product += a;
+                b--;
+            } while (b >= 1);
+        } else {
+            do {
+                product -=a;
+                b++;
+            } while(b <= -1);
+        }
+        return product;
+    }
+
+
+
+
 // 2. Method that validates user inputs are in a certain range:////////////////////////////////////////
 
     public static int getInteger(int min, int max) {
@@ -103,6 +129,10 @@ public class MethodsExercises {
             System.out.print("= ");
             return factorial;
     }
+
+
+
+
 
 // 4. Create an application that simulates dice rolling://///////////////////////////////////////////////
 
