@@ -1,18 +1,52 @@
 public class ExtraJavaMethodsPractice {
     public static void main(String[] args) {
+        System.out.println(firstChar("New string here!"));
+        System.out.println(secondChar("New string here!"));
+        System.out.println(lastChar("New string here!"));
+        System.out.println(secondToLastChar("New string here!"));
 
-//        TODO:
+
+//  ***** This closes the Main Method *****
+    }
+
+//  TODO: //////////////////////////////////////////////////////////////////////////
 //  Java Methods Practice:
 
 //  1. Write a method named firstChar() that takes a string as an input and returns the first letter as a character data type.
+    public static char firstChar(String userInput){
+            return userInput.charAt(0);
+        }
 
-//  2. Write a method named secondChar() that takes a string as an input and returns the first letter as a character data type.
+//  2. Write a method named secondChar() that takes a string as an input and returns the second letter as a character data type.
+
+    public static char secondChar(String userInput){
+        return userInput.charAt(1);
+    }
 
 //  3. Write a method named lastChar() that takes a string as an input and returns the last letter as a character data type.
 
+    public static char lastChar(String userInput){
+        int length = userInput.length();
+        return userInput.charAt(length-1);
+    }
+
 //  4. Write a method named secondToLastChar() that takes a string as an input and returns the second to letter as a character data type.
 
+    public static char secondToLastChar(String userInput){
+        int length = userInput.length();
+        return userInput.charAt(length-2);
+    }
+
+
 //  5. Write a method named userWantsToContinue(). This method should prompt the user if they want to continue and then return a boolean value if the user inputs "y" or "yes".
+
+//    public static boolean userWantsToContinue(String userInput){
+//        if (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")) {
+//            boolean continueYes = true;
+//        } else {
+//            System.out.println("You chose not to continue.");
+//        } return continueYes;
+//    }
 
 //  6. Write a method named isEven() that takes in an integer and returns a boolean if the input is even or not.
 //
@@ -40,9 +74,6 @@ public class ExtraJavaMethodsPractice {
 
 
 
-//  **This closes the Main Method**
-    }
 
-
-// **This closes the ExtraJavaMethodsPractice Method at the very top**
+// ***** This closes the ExtraJavaMethodsPractice Method at the very top *****
 }
