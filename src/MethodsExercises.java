@@ -4,20 +4,20 @@ import java.lang.Math;
 public class MethodsExercises {
 
     public static void main(String[] args) {
-
-        System.out.print(addition(5, 7));
-        System.out.println();
-        System.out.print(subtraction(10, 3));
-        System.out.println();
-        System.out.print(multiplication(9, 2));
-        System.out.println();
-        System.out.print(division(12, 3));
-        System.out.println();
-        System.out.print(modulus(37, 2));
-        System.out.print(getInteger(1, 10));
-        System.out.print(factorial());
-        System.out.print(diceRoll());
-        System.out.print(multiplyManually(4, 5));
+//
+//        System.out.print(addition(5, 7));
+//        System.out.println();
+//        System.out.print(subtraction(10, 3));
+//        System.out.println();
+//        System.out.print(multiplication(9, 2));
+//        System.out.println();
+//        System.out.print(division(12, 3));
+//        System.out.println();
+//        System.out.print(modulus(37, 2));
+//        System.out.print(multiplyManually(4, 5));
+//        System.out.print(getInteger(1, 10));
+//        System.out.print(factorial());
+           promptRoll();
     }
 
 // 1. Basic Arithmetic Methods:
@@ -136,40 +136,36 @@ public class MethodsExercises {
 
 // 4. Create an application that simulates dice rolling://///////////////////////////////////////////////
 
-    public static int diceRoll() {
+    public static void promptRoll() {
         System.out.println("\nLet's roll the dice.");
         Scanner scan = new Scanner(System.in).useDelimiter("\n");
-        System.out.format("\nEnter a number of sides for the first die:\n");
-        int dieA = scan.nextInt();
-        System.out.format("\nEnter a number of sides for the second die:\n");
-        int dieB = scan.nextInt();
-
-//  define the range for the roll for die A
-        int maxA = dieA;
-        int minA = 1;
-        int rangeA = maxA - minA + 1;
-
-//  generate the random numbers to simulate the roll for die A
-        for (int i=0; i<=maxA; i++){
-            int dieRollA = (int) (Math.random() * rangeA) + minA;
-            System.out.println(dieRollA);
-            return dieRollA;
+        System.out.format("\nHow many side are on the dice?\n");
+        int dice = scan.nextInt();
+        System.out.println("Ready to roll? [y/n]");
+        String readyRoll = scan.next();
+        if (readyRoll.equalsIgnoreCase("y")) {
+            diceRoll(dice);
         }
+    }
 
-//  define the range for the roll for die B
-        int maxB = dieB;
-        int minB = 1;
-        int rangeB = maxB - minB + 1;
+        public static void diceRoll(int dice) {
+        //  define the range for the roll for dice
+        int max = dice;
+        int min = 1;
+        int range = max - min + 1;
 
-//  generate the random numbers to simulate the roll for die B
-        for (int i=0; i<=maxB; i++){
-            int dieRollB = (int) (Math.random() * rangeB) + minB;
-            System.out.println(dieRollB);
-            return dieRollB;
-        }
-        return dieA;
+            int diceRollA = (int) (Math.random() * range) + min;
+            System.out.println("Die A: " + diceRollA);
+//
+            int diceRollB = (int) (Math.random() * range) + min;
+            System.out.println("Die B: " + diceRollB);
+//
+            int rollTotal = diceRollA + diceRollB;
+            System.out.println("Dice Total: " + rollTotal);
 
     }
+
+
 
 
 //this closes the MethodsExercises class at the very top:
