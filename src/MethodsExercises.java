@@ -4,20 +4,20 @@ import java.lang.Math;
 public class MethodsExercises {
 
     public static void main(String[] args) {
-//
-//        System.out.print(addition(5, 7));
-//        System.out.println();
-//        System.out.print(subtraction(10, 3));
-//        System.out.println();
-//        System.out.print(multiplication(9, 2));
-//        System.out.println();
-//        System.out.print(division(12, 3));
-//        System.out.println();
-//        System.out.print(modulus(37, 2));
-//        System.out.print(multiplyManually(4, 5));
-//        System.out.print(getInteger(1, 10));
-//        System.out.print(factorial());
-           promptRoll();
+
+        System.out.print(addition(5, 7));
+        System.out.println();
+        System.out.print(subtraction(10, 3));
+        System.out.println();
+        System.out.print(multiplication(9, 2));
+        System.out.println();
+        System.out.print(division(12, 3));
+        System.out.println();
+        System.out.print(modulus(37, 2));
+        System.out.print(multiplyManually(4, 5));
+        System.out.print(getInteger(1, 10));
+        System.out.print(factorial());
+        promptRoll();
     }
 
 // 1. Basic Arithmetic Methods:
@@ -129,8 +129,6 @@ public class MethodsExercises {
             System.out.print("= ");
             return factorial;
     }
-
-
 
 
 

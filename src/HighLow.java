@@ -17,16 +17,18 @@ public class HighLow {
             int randomNumber = (int) (Math.random() * range) + min;
             System.out.print("\nGuess the number:\n");
             int numberGuess = scan.nextInt();
-
+            int turnCounter = 1;
             for (int i = 1; i <= 100; i++) {
                 if (randomNumber == numberGuess) {
-                    System.out.println("\nYou guessed the number correctly!");
-                    return numberGuess;
+                    System.out.println("\nWINNER WINNER!\nThe number was: ");
+                  return randomNumber;
                 } else if(numberGuess < randomNumber){
-                    System.out.println("HIGHER");
+                    System.out.println("HIGHER! Wrong Guesses: " + turnCounter);
+                    turnCounter++;
                     numberGuess = scan.nextInt();
                 } else if(numberGuess > randomNumber){
-                    System.out.println("LOWER");
+                    System.out.println("LOWER! Wrong Guesses: " + turnCounter);
+                    turnCounter++;
                     numberGuess = scan.nextInt();
                 }
             }
