@@ -2,30 +2,30 @@ import java.util.Scanner;
 
 public class ExtraJavaMethodsPractice {
     public static void main(String[] args) {
-//        System.out.println(firstChar("New string here!"));
-//        System.out.println(secondChar("New string here!"));
-//        System.out.println(lastChar("New string here!"));
-//        System.out.println(secondToLastChar("New string here!"));
-//        System.out.println(userWantsToContinue());
-//        System.out.println(userWantsToContinue());
-//        System.out.println(isEven(6));
-//        System.out.println(isEven(13));
-//        System.out.println(isOdd(45));
-//        System.out.println(isOdd(22));
-//        System.out.println(countsOdds(1, 5));
-//        System.out.println(countsEvens(3, 10));
-//        System.out.println(isVowel("A"));
-//        System.out.println(isVowel("B"));
-//        System.out.println(hasVowel("Dog"));
-//        System.out.println(hasVowel("www"));
-//        System.out.println(countVowels("aaabbbcccdddeee"));
-//        fizzBuzz(100);
-//        forLoopFizzBuzz(100);
-//        System.out.println(isPrime(2));
-//        System.out.println(isPrime(7));
-//        System.out.println(isPrime(12));
+        System.out.println(firstChar("New string here!"));
+        System.out.println(secondChar("New string here!"));
+        System.out.println(lastChar("New string here!"));
+        System.out.println(secondToLastChar("New string here!"));
+        System.out.println(userWantsToContinue());
+        System.out.println(userWantsToContinue());
+        System.out.println(isEven(6));
+        System.out.println(isEven(13));
+        System.out.println(isOdd(45));
+        System.out.println(isOdd(22));
+        System.out.println(countsOdds(1, 5));
+        System.out.println(countsEvens(3, 10));
+        System.out.println(isVowel("A"));
+        System.out.println(isVowel("B"));
+        System.out.println(hasVowel("Dog"));
+        System.out.println(hasVowel("www"));
+        System.out.println(countVowels("aaabbbcccdddeee"));
+        fizzBuzz(100);
+        forLoopFizzBuzz(100);
+        System.out.println(isPrime(2));
+        System.out.println(isPrime(7));
+        System.out.println(isPrime(12));
         getTwentyPrimes(20);
-//
+
 
 //  ***** This closes the Main Method *****
     }
@@ -221,7 +221,6 @@ public class ExtraJavaMethodsPractice {
 
 
 
-
 //  15. Write a method named getTwentyPrimes() that returns a string containing the first 20 prime numbers, each separated by a comma. Output: "1, 2, 3, 5, 7, 11, 13, 17, 19"... until we have a total count of 20 primes in the string.
 
 
@@ -256,7 +255,6 @@ public class ExtraJavaMethodsPractice {
 //                    number ++;
 //              }
 //        }
-
 
 
 
