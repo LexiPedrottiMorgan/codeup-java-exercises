@@ -2,25 +2,30 @@ import java.util.Scanner;
 
 public class ExtraJavaMethodsPractice {
     public static void main(String[] args) {
-//        System.out.println(firstChar("New string here!"));
-//        System.out.println(secondChar("New string here!"));
-//        System.out.println(lastChar("New string here!"));
-//        System.out.println(secondToLastChar("New string here!"));
-//        System.out.println(userWantsToContinue());
-//        System.out.println(userWantsToContinue());
-//        System.out.println(isEven(6));
-//        System.out.println(isEven(13));
-//        System.out.println(isOdd(45));
-//        System.out.println(isOdd(22));
-//        System.out.println(countsOdds(1, 5));
-//        System.out.println(countsEvens(3, 10));
-//        System.out.println(isVowel("A"));
-//        System.out.println(isVowel("B"));
-//        System.out.println(hasVowel("Dog"));
-//        System.out.println(hasVowel("www"));
-//        System.out.println(countVowels("aaabbbcccdddeee"));
+        System.out.println(firstChar("New string here!"));
+        System.out.println(secondChar("New string here!"));
+        System.out.println(lastChar("New string here!"));
+        System.out.println(secondToLastChar("New string here!"));
+        System.out.println(userWantsToContinue());
+        System.out.println(userWantsToContinue());
+        System.out.println(isEven(6));
+        System.out.println(isEven(13));
+        System.out.println(isOdd(45));
+        System.out.println(isOdd(22));
+        System.out.println(countsOdds(1, 5));
+        System.out.println(countsEvens(3, 10));
+        System.out.println(isVowel("A"));
+        System.out.println(isVowel("B"));
+        System.out.println(hasVowel("Dog"));
+        System.out.println(hasVowel("www"));
+        System.out.println(countVowels("aaabbbcccdddeee"));
         System.out.println(fizzBuzz(30));
 //        System.out.println(forLoopFizzBuzz(30));
+        System.out.println(isPrime(5));
+        System.out.println(isPrime(7));
+        System.out.println(isPrime(12));
+        getTwentyPrimes();
+//
 
 //  ***** This closes the Main Method *****
     }
@@ -198,8 +203,39 @@ public class ExtraJavaMethodsPractice {
 
 //  14. Write a method named isPrime() that that accepts in an integer number and returns a boolean if the number is evenly divisible only by either 1 or the number itself.
 
+//    works for positive numbers, breaks for negative numbers:
+    public static boolean isPrime(int number) {
+        boolean prime = false;
+        int divisibleCounter = 0;
+        for (int i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    divisibleCounter++;
+                }
+        }
+        if (divisibleCounter <= 2) {
+                    prime = true;
+                    return prime;
+                } else if (divisibleCounter>2){
+                    prime = false;
+                    return prime;
+                }
+             return prime;
+        }
+
+
+
+
 //  15. Write a method named getTwentyPrimes() that returns a string containing the first 20 prime numbers, each separated by a comma. Output: "1, 2, 3, 5, 7, 11, 13, 17, 19"... until we have a total count of 20 primes in the string.
 
+    public static String getTwentyPrimes(){
+        String firstTwentyPrimes = "";
+            for (int i = 1; i <= 70; i++) {
+                if (isPrime(i)) {
+                    firstTwentyPrimes += (i + ", ");
+                }
+            } System.out.println(firstTwentyPrimes);
+                return firstTwentyPrimes;
+        }
 
 
 
