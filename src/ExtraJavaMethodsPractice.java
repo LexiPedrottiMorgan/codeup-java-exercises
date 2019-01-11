@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ExtraJavaMethodsPractice {
@@ -22,7 +21,7 @@ public class ExtraJavaMethodsPractice {
 //        System.out.println(countVowels("aaabbbcccdddeee"));
 //        fizzBuzz(100);
 //        forLoopFizzBuzz(100);
-//        System.out.println(isPrime(5));
+//        System.out.println(isPrime(2));
 //        System.out.println(isPrime(7));
 //        System.out.println(isPrime(12));
         getTwentyPrimes(20);
@@ -225,20 +224,38 @@ public class ExtraJavaMethodsPractice {
 
 //  15. Write a method named getTwentyPrimes() that returns a string containing the first 20 prime numbers, each separated by a comma. Output: "1, 2, 3, 5, 7, 11, 13, 17, 19"... until we have a total count of 20 primes in the string.
 
+
+//No tailing comma:
     public static void getTwentyPrimes(int input){
         int primeCounter = 0;
         int number = 1;
         while (primeCounter < input) {
-                if (isPrime(number)) {
+            if (isPrime(number)) {
+                if (primeCounter != input-1) {
                     System.out.print(number + ", ");
                     primeCounter++;
-                }
-                    number ++;
-              }
+                } else if (primeCounter == input -1) {
+                 System.out.print(number);
+                 primeCounter++;
+             }
+            }
+            number ++;
         }
+    }
 
 
-
+//has a tailing comma:
+//    public static void getTwentyPrimes(int input){
+//        int primeCounter = 0;
+//        int number = 1;
+//        while (primeCounter < input) {
+//                if (isPrime(number)) {
+//                    System.out.print(number + ", ");
+//                    primeCounter++;
+//                }
+//                    number ++;
+//              }
+//        }
 
 
 
