@@ -50,7 +50,7 @@ public class Input {
            }
        }
 
-       double getDouble() {
+       public double getDouble() {
            System.out.println("Enter a double:");
               double input = scan.nextDouble();
                return input;
