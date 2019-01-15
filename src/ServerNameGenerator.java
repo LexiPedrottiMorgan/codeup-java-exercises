@@ -26,10 +26,9 @@ public class ServerNameGenerator {
         adjectives[8] = "Tiny";
         adjectives[9] = "Blue";
 
-            int random = (int) (Math.random()* + 10);
-
-            int randomAdj = (int) (Math.random()* + 10);
-            System.out.println("Your Randomly Generated Server Name: " + adjectives[randomAdj] + "-" + nouns[random] + ".");
+            int random = (int) (Math.random()* + nouns.length-1);
+            int randomAdj = (int) (Math.random()* + adjectives.length-1);
+            System.out.println("Your Randomly Generated Server Name: \n" + adjectives[randomAdj] + "-" + nouns[random] + ".");
 
 
 

@@ -19,7 +19,7 @@ public class User {
 //          - private isLoggedIn boolean property and default it to false.
 //          - private static int numberOfUsers.
 //
-        User user1 = new User;
+//        User user1 = new User;
 
         private String username;
         private String password;
