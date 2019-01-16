@@ -20,8 +20,8 @@ public class Input {
            } return false;
        }
 
-       int getInt(int min, int max){
-           System.out.println("Enter a number between " + min + " and " + max);
+       public int getInt(int min, int max){
+           System.out.println("Enter a number between " + min + " and " + max + ":");
            int inputNumber = scan.nextInt();
            if (inputNumber >= min && inputNumber <= max){
                return inputNumber;
@@ -32,10 +32,10 @@ public class Input {
            }
        }
 
-       int getInt(){
-           System.out.println("Enter a number:");
+       public int getInt(){
+          System.out.println("Enter a number:");
           int input = scan.nextInt();
-           return input;
+          return input;
        }
 
        double getDouble(double min, double max) {

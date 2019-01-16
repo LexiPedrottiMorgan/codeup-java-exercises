@@ -14,9 +14,11 @@ public class ArraysExercises {
         people[4] = new Person("Annie");
 
 
-//        for(Person person: people){
-//           System.out.println(person.getName());
-//       }
+        for(Person person: people){
+           System.out.println(person.getName());
+       }
+
+
         for (Person person: addPerson(people, new Person("Newest!!"))){
         System.out.println(person.getName());
 
