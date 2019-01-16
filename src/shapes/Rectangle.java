@@ -29,4 +29,14 @@ public class Rectangle {
         return perimeter;
     }
 
+   public void getInfo() {
+       if (length == width) {
+           System.out.println("The perimeter of a square with side length of " + length + " is: " + getPerimeter());
+           System.out.println("The area of a square with side length of " + length + " is: " + getArea());
+       } else {
+           System.out.println("The perimeter of a rectangle with length of " + length + " and width of " + width + " is: " + getPerimeter());
+           System.out.println("The area of a rectangle with length of " + length + " and width of " + width + " is: " + getArea());
+       }
+   }
+
 }

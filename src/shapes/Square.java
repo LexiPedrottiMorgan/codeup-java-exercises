@@ -6,21 +6,18 @@ public class Square extends Rectangle {
     public Square(int side) {
         super(side, side);
         this.side = side;
-        setLength(side);
-        setWidth(side);
     }
 
 
     @Override
     public int getArea(){
-        int area = side*side;
-        return area;
+//     explicit casting to make Math.pow an int instead of double
+        return (int) Math.pow(side, 2);
     }
 
     @Override
     public int getPerimeter(){
-        int perimeter= 4*side;
-        return perimeter;
+        return 4*side;
     }
 
 
