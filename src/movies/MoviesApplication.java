@@ -67,7 +67,7 @@ public class MoviesApplication {
             System.out.println("2 = view movies in the animated category 👸🐶");
             System.out.println("3 = view movies in the drama category 🤭");
             System.out.println("4 = view movies in the horror category 😨");
-            System.out.println("5 = view movies in the scifi category 👽2\n");
+            System.out.println("5 = view movies in the scifi category 👽\n");
             inputNumber = input.getInt(0,5);
 
         }while(inputNumber!=0);
@@ -79,6 +79,9 @@ public class MoviesApplication {
 
 // closes main:
     }
+
+
+//    trying to do it with recursion-- UNFINISHED:
 // public static int runMenu(int inputNumber){
 //    Movie[] movies = MoviesArray.findAll();
 //    Input input = new Input();
