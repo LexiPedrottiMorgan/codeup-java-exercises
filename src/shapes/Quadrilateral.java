@@ -11,6 +11,8 @@ abstract class Quadrilateral extends Shape implements Measurable {
         this.width = width;
     }
 
+
+//  getters:
     public int getLength() {
         return length;
     }
@@ -20,8 +22,8 @@ abstract class Quadrilateral extends Shape implements Measurable {
     }
 
 
-//abstract methods for setting length and width:
-    abstract class setLength{
+//  abstract methods for setting length and width:
+    public abstract class setLength{
 
     }
 

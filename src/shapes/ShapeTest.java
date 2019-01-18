@@ -7,21 +7,20 @@ public class ShapeTest {
         Measurable myShape1 = new Square(5);
         Measurable myShape2 = new Rectangle(2,3);
 
-//        Measurable square = new Square(5);
-//        Measurable rectangle = new Rectangle(2,3);
-//
-//        System.out.println(square.getArea());
-//        System.out.println(rectangle.getPerimeter());
-//        System.out.println(rectangle.getArea());
-//        System.out.println(square.getPerimeter());
 
-        System.out.println("Shape 1:");
-        System.out.println(myShape1.getArea());
-        System.out.println(myShape1.getPerimeter());
+        System.out.println("Shape 1");
+        System.out.println("Area: " + myShape1.getArea());
+        System.out.println("Perimeter: " + myShape1.getPerimeter());
 
-        System.out.println("Shape 2:");
-        System.out.println(myShape2.getPerimeter());
-        System.out.println(myShape2.getArea());
+        System.out.println("Shape 2");
+        System.out.println("Area: " + myShape2.getArea());
+        System.out.println("Perimeter: " + myShape2.getPerimeter());
+
+//  closes main:
+    }
+
+// closes ShapeTest:
+}
 
 
 
@@ -50,11 +49,6 @@ public class ShapeTest {
 //    Rectangle box2 = new Square(5);
 //        box2.getInfo();
 
-//  closes main:
-    }
-
-// closes ShapeTest:
-}
 
 
-.
+
