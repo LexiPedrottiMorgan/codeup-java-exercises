@@ -8,6 +8,9 @@ public class GradesApplication {
     public static void main(String[] args) {
 
     HashMap<String, Student> students = new HashMap<>();
+    //  import input class:
+      Input input = new Input();
+
 
         Student student1 = new Student("Lexi");
         Student student2 = new Student("Aaron");
@@ -41,29 +44,26 @@ public class GradesApplication {
             System.out.print(" | " + key + " | ");
         }
 
+
+        do {
         System.out.println("\n\nWhich user do you want information on? \nEnter username below:");
 
-//        import input class:
-        Input input = new Input();
+         String userInput = input.getString();
 
-        String userInput = input.getString();
+         if (students.keySet().contains(userInput)) {
+             System.out.println("\nInformation for: " + userInput + "\n");
+             System.out.println("Name: " + students.get(userInput).getName() + "\nGithub username: " + userInput);
+             System.out.println("Current Average: " + students.get(userInput).getAverage());
+             System.out.println("All Grades: " + students.get(userInput).getGrades());
+         } else {
+             System.out.println("Sorry, no student found with the github username of " + userInput);
+             System.out.println("\nEnter a valid username to view information:\n");
+             userInput = input.getString();
+             System.out.println("> " + userInput);
+         }
+     } while (input.yesNo("\nWould you like to view another user?"));
 
-        System.out.println("> " + userInput);
-
-        if (students.keySet().contains(userInput)) {
-            System.out.println("Information for: " + userInput + "\n");
-            System.out.println("Name: " + students.get(userInput).getName() + " - Github username: " + userInput);
-            System.out.println("Current Average: " + students.get(userInput).getAverage());
-
-        } else {
-            System.out.println("Sorry, no student found with the github username of " + userInput);
-            System.out.println("\nEnter a valid username to view information:\n");
-            userInput = input.getString();
-            System.out.println("> " + userInput);
-        }
-
-
-
+        System.out.println("\nGoodbye");
 
 
 
