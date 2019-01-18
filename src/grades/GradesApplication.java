@@ -9,8 +9,6 @@ public class GradesApplication {
 
     HashMap<String, Student> students = new HashMap<>();
 
-
-
         Student student1 = new Student("Lexi");
         Student student2 = new Student("Aaron");
         Student student3 = new Student("Molly");
@@ -32,12 +30,10 @@ public class GradesApplication {
         student4.addGrade(30);
         student4.addGrade(60);
 
-
         students.put("LexiPedrottiMorgan", student1);
         students.put("Aaronb2", student2);
         students.put("GoodestGirlMollyPop", student3);
         students.put("MoonMoonMako", student4);
-
 
         System.out.println("Welcome!\n");
         System.out.println("Here are the github usernames of our students:\n");
@@ -47,7 +43,6 @@ public class GradesApplication {
 
         System.out.println("\n\nWhich user do you want information on? \nEnter username below:");
 
-
 //        import input class:
         Input input = new Input();
 
@@ -55,9 +50,8 @@ public class GradesApplication {
 
         System.out.println("> " + userInput);
 
-
-        if (students.keySet().contains(userInput)){
-            System.out.println("Information for: " + userInput+ "\n");
+        if (students.keySet().contains(userInput)) {
+            System.out.println("Information for: " + userInput + "\n");
             System.out.println("Name: " + students.get(userInput).getName() + " - Github username: " + userInput);
             System.out.println("Current Average: " + students.get(userInput).getAverage());
 
@@ -73,8 +67,10 @@ public class GradesApplication {
 
 
 
+
 //        closes MAIN:
     }
+
 
 
 //   closes GRADESAPPLICATION:
