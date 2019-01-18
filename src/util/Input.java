@@ -12,12 +12,20 @@ public class Input {
        }
 
        public boolean yesNo(){
-           System.out.println("Enter yes or no");
            String input = scan.next();
            if (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y") || input.contains("yes")) {
                return true;
            } return false;
        }
+
+
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        String input = scan.next();
+        if (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y") || input.contains("yes")) {
+            return true;
+        } return false;
+    }
 
        public int getInt(int min, int max){
            System.out.println("Enter a number between " + min + " and " + max + ":");
