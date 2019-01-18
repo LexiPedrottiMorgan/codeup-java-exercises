@@ -34,14 +34,17 @@ public class Student {
     }
 
     // returns the average of the students grades
-    public int getAverage(){
-        grades = getGrades();
-        int sum = 0;
-        for(int grade: grades){
-            sum += grade;
+    public int getAverage() {
+        if (grades.size() == 0) {
+            return 0;
+        } else {
+            grades = getGrades();
+            int sum = 0;
+            for (int grade : grades) {
+                sum += grade;
+            }
+            return sum / grades.size();
         }
-        int length = grades.size();
-        return sum/length;
     }
 
 

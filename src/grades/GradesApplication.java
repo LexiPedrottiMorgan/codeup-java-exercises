@@ -44,10 +44,11 @@ public class GradesApplication {
             System.out.print(" | " + key + " | ");
         }
 
+        System.out.println("\n\n ** OR enter \"ALL\" to view all students grades and class average");
 
         do {
         System.out.println("\n\nWhich user do you want information on? \nEnter username below:");
-
+            System.out.print("> ");
          String userInput = input.getString();
 
          if (students.keySet().contains(userInput)) {
@@ -55,13 +56,21 @@ public class GradesApplication {
              System.out.println("Name: " + students.get(userInput).getName() + "\nGithub username: " + userInput);
              System.out.println("Current Average: " + students.get(userInput).getAverage());
              System.out.println("All Grades: " + students.get(userInput).getGrades());
-         } else {
+         }
+//         this is for bonus #2 to display all students grades: NOT WORKING YET
+//         else if(userInput.equalsIgnoreCase("ALL")) {
+//             System.out.println("Name: " + students.get(students).getName());
+//             System.out.println("Grades: " + students.get(students).getGrades());
+//             System.out.println("Average: " + students.get(students).getAverage());
+//            }
+            else {
              System.out.println("Sorry, no student found with the github username of " + userInput);
              System.out.println("\nEnter a valid username to view information:\n");
              userInput = input.getString();
-             System.out.println("> " + userInput);
+             System.out.print("> " + userInput);
          }
      } while (input.yesNo("\nWould you like to view another user?"));
+
 
         System.out.println("\nGoodbye");
 
