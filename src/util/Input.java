@@ -6,8 +6,7 @@ public class Input {
 
        private Scanner scan = new Scanner(System.in).useDelimiter("\n");
 
-       String getString(){
-           System.out.println("Enter a string:");
+       public String getString(){
            String input = scan.next();
             return input;
        }
