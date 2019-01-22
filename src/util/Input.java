@@ -27,41 +27,67 @@ public class Input {
         } return false;
     }
 
-       public int getInt(int min, int max){
-           System.out.println("Enter a number between " + min + " and " + max + ":");
-           int inputNumber = scan.nextInt();
-           if (inputNumber >= min && inputNumber <= max){
-               return inputNumber;
-           } else {
-               System.out.println("Enter a number between " + min + " and " + max);
-               scan.nextInt();
-               return (getInt(min, max));
-           }
-       }
+
 
        public int getInt(){
           System.out.println("Enter a number:");
-          int input = scan.nextInt();
-          return input;
-       }
-
-       double getDouble(double min, double max) {
-           System.out.println("Enter a double between " + min + " and " + max);
-           double inputDouble = scan.nextDouble();
-           if (inputDouble >= min && inputDouble <= max) {
-               return inputDouble;
-           } else {
-               System.out.println("Invalid Input.");
-               scan.nextDouble();
-               return (getDouble(min, max));
+           String input = scan.next();
+           try {
+                return Integer.valueOf(input);
+          } catch(NumberFormatException ex) {
+              System.out.println("There was a number format exception here!!");
+              return getInt();
            }
        }
+
+
+
+    public int getInt(int min, int max){
+        System.out.println("Enter a number between " + min + " and " + max + ":");
+        String inputNumber = scan.next();
+        try {
+            int inputValue = Integer.valueOf(inputNumber);
+            if (inputValue >= min && inputValue <= max) {
+                return inputValue;
+            } else {
+                System.out.println("Invalid input");
+                return (getInt(min, max));
+            }
+        } catch(NumberFormatException ex) {
+            System.out.println("There was a number format exception here!!");
+            return getInt(min, max);
+        }
+
+    }
+
+
+    double getDouble(double min, double max) {
+           System.out.println("Enter a double between " + min + " and " + max);
+           String inputDouble = scan.next();
+           try {
+               double inputDoubleValue = Double.valueOf(inputDouble);
+               if (inputDoubleValue >= min && inputDoubleValue <= max) {
+                   return inputDoubleValue;
+               } else {
+                   System.out.println("Invalid Input.");
+                   return (getDouble(min, max));
+               }
+           } catch(NumberFormatException ex){
+               System.out.println("There was a number format exception here!!");
+               return getDouble(min, max);
+           }
+       }
+
 
        public double getDouble() {
            System.out.println("Enter a double:");
-              double input = scan.nextDouble();
-               return input;
-           }
+              String input = scan.next();
+           try {
+               return Double.valueOf(input);
+           } catch(NumberFormatException ex){
+               System.out.println("There was a number format exception here!!");
+            } return getDouble();
+          }
 
 
 
